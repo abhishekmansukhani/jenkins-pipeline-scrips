@@ -14,7 +14,7 @@ node {
    stage ("Moving Artifacts"){
    echo 'Moving Artifacts to user content..'
    sh 'rm -rf ~/userContent/*;'
-   sh 'find /var/lib/jenkins/workspace -name *.jar -exec cp {} ~/userContent/ \;'
+   sh 'find /var/lib/jenkins/workspace -name *.jar -exec cp {} ~/userContent/ \\;'
    echo 'Artifacts available at http://192.168.33.10:8080/userContent/..'
    }
 }
